@@ -24,7 +24,7 @@ func shardSize(dataLen, dataShards int) int {
 	if dataLen == 0 {
 		return 0
 	}
-	return dataLen / dataShards
+	return (dataLen + dataShards - 1) / dataShards
 }
 
 // padToShards splits data into dataShards equal-length shards, padding the final
